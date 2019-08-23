@@ -1,0 +1,10 @@
+# X-Pack Settings 
+
+xpack.monitoring.enabled: true
+xpack.monitoring.elasticsearch.username: myuser
+xpack.monitoring.elasticsearch.password: mypassword
+xpack.monitoring.elasticsearch.hosts: ["eshost:esport"]
+xpack.monitoring.elasticsearch.ssl.certificate_authority: /path/to/ca.crt
+xpack.monitoring.elasticsearch.sniffing: false
+xpack.monitoring.collection.interval: 10s
+xpack.monitoring.collection.pipeline.details.enabled: true
