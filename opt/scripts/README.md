@@ -29,7 +29,7 @@
 ## awscli with custom domain, ssl cert
 * <strong>aws --endpoint-url https://my.s3.url.com --ca-bundle /path/to/ca.pem s3 ls</strong>
 
-## import new .crt into ca
+## Import new .crt into ca
 * <strong>keytool -import -keystore /path/to/ca -storepass capassword -file /path/to/newcert.crt -alias newcertalias -noprompt</strong>
 
 ## Passwordless ssh
