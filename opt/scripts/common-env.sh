@@ -10,3 +10,7 @@ export SCHEMA_REGISTRY_OPTS="-Djava.security.auth.login.config=/path/to/client-j
 ## custom java/binaries
 export JAVA_HOME=/path/to/java
 export PATH=$PATH:$JAVA_HOME/bin
+
+## connect to other networks (e.g. external) via proxy
+export http_proxy=http://user:password@proxy.com:proxyport
+export https_proxy=http://user:password@proxy.com:proxyport
