@@ -1,1 +1,19 @@
+[Unit]
+Description=Simple Systemd Application
 
+[Service]
+Type=simple
+User=myuser
+Group=myusergroup
+
+ExecStart=/path/to/script
+
+Restart=always
+RestartSec=30
+WorkingDirectory=/
+Nice=19
+PIDFile=/path/to/pidfile
+# LimitNOFILE=16384
+
+[Install]
+WantedBy=multi-user.target
