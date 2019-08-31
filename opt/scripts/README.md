@@ -1,7 +1,7 @@
 # Other Helpful Tools
 
 ## SSH with private key file & non-22 port
-* <strong>ssh -i /path/to/key.pem -p myport myuser@myhost</strong>
+* <strong>`ssh -i /path/to/key.pem -p myport myuser@myhost`</strong>
 
 ## SCP with different port, recursive
 * <strong>scp -r -P myport myuser@myhost:/remote/path/to/file /local/path/to/file</strong>
@@ -38,3 +38,6 @@
 * 3) Create <strong>.ssh</strong> directory if not already there, and create/append to <strong>authorized_keys</strong> file in the folder with the content from the local host public key e.g. via <strong>cat .ssh/id.pub</strong>
 * 4) Execute <strong>chmod 700 .ssh; chmod 640 .ssh/authorized_keys</strong> in the remote host
 * 5) <strong>ssh</strong> command without password should work 
+
+## Get Public IP
+* `curl https://api.ipify.org/`
