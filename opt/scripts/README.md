@@ -23,6 +23,10 @@
 * 4) Under ktutil prompt, execute `wkt /path/to/myuser.keytab` and press enter, and exit prompt
 * 5) To check keytab, execute `klist -k /path/to/myuser.keytab`
 
+## Getting TGT with krb5 CLI
+* With keytab: `kinit -kt myuser.keytab myuser[@MY.OTHER.REALM.COM]`
+* Without keytab: `kinit myuser[@MY.OTHER.REALM.COM]`
+
 ## Redis cluster mode shell
 * `redis-cli -p myport -h myhost -a myauth -c`
 
