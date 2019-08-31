@@ -28,12 +28,6 @@
 * Without keytab: `kinit myuser[@MY.OTHER.REALM.COM]`
 * Check TGT: `klist`
 
-## Redis cluster mode shell
-* `redis-cli -p myport -h myhost -a myauth -c`
-
-## awscli with custom domain, ssl cert
-* `aws --endpoint-url https://my.s3.url.com --ca-bundle /path/to/ca.pem s3 ls`
-
 ## Import new .crt into ca
 * `keytool -import -keystore /path/to/ca -storepass capassword -file /path/to/newcert.crt -alias newcertalias -noprompt`
 
