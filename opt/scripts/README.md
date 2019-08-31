@@ -26,6 +26,7 @@
 ## Getting TGT with krb5 CLI
 * With keytab: `kinit -kt myuser.keytab myuser[@MY.OTHER.REALM.COM]`
 * Without keytab: `kinit myuser[@MY.OTHER.REALM.COM]`
+* Check TGT: `klist`
 
 ## Redis cluster mode shell
 * `redis-cli -p myport -h myhost -a myauth -c`
