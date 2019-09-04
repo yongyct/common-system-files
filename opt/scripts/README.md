@@ -4,7 +4,8 @@
 * `ssh -i /path/to/key.pem -p myport myuser@myhost`
 
 ## SSH Tunneling with Local Port Forwarding
-* `ssh -L [binded local address:]myport:remotehost:remoteport myuser@sshtunnelhost 
+* `ssh -L [binded local address:]myport:remotehost:remoteport myuser@sshtunnelhost`
+* hitting localaddress:port will be redirected to remotehost:port
 
 ## SCP with different port, recursive
 * `scp -r -P myport myuser@myhost:/remote/path/to/file /local/path/to/file`
