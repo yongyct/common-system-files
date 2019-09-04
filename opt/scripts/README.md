@@ -3,6 +3,9 @@
 ## SSH with private key file & non-22 port
 * `ssh -i /path/to/key.pem -p myport myuser@myhost`
 
+## SSH Tunneling with Local Port Forwarding
+* `ssh -L [binded local address:]myport:remotehost:remoteport myuser@sshtunnelhost 
+
 ## SCP with different port, recursive
 * `scp -r -P myport myuser@myhost:/remote/path/to/file /local/path/to/file`
 
