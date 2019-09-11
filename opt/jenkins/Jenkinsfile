@@ -1,0 +1,70 @@
+#!groovy
+
+def gitInfo = {}
+
+pipeline {
+  agent any
+  
+  stages {
+  
+    stage('Git Checkout') {
+      steps {
+        script {
+          gitInfo = checkout scm
+        }
+      }
+    }
+    
+    stage('Build') {
+      steps {
+        script {
+          sh """
+          echo "Building"
+          mvn clean package
+          echo "Build Complete"
+          """
+        }
+      }
+    }
+    
+    stage('Code Scan') {
+      steps {
+        script {
+          Map mp = [
+            // Properties here
+          ]
+          // call custom function from shared library
+          // e.g. codeScan(mp)
+        }
+      }
+    }
+    
+    stage('Deploy') {
+      steps {
+        script {
+          // shared library custom function
+        }
+      }
+    }
+    
+    post {
+      always {
+        deleteDir()  //clean up workspace
+      }
+      success {
+        echo "Successful Deployment"
+      }
+      failure {
+        echo "Failed Deployment"
+      }
+      unstable {
+        echo "Unstable Deployment"
+      }
+      changed {
+        echo "Pipeline state changed from $currentBuild.previousBuild"
+      }
+    }
+    
+  }
+  
+}
