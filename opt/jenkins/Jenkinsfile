@@ -47,24 +47,24 @@ pipeline {
       }
     }
     
-    post {
-      always {
-        deleteDir()  //clean up workspace
-      }
-      success {
-        echo "Successful Deployment"
-      }
-      failure {
-        echo "Failed Deployment"
-      }
-      unstable {
-        echo "Unstable Deployment"
-      }
-      changed {
-        echo "Pipeline state changed from $currentBuild.previousBuild"
-      }
+  }
+
+  post {
+    always {
+      deleteDir()  //clean up workspace
     }
-    
+    success {
+      echo "Successful Deployment"
+    }
+    failure {
+      echo "Failed Deployment"
+    }
+    unstable {
+      echo "Unstable Deployment"
+    }
+    changed {
+      echo "Pipeline state changed from $currentBuild.previousBuild"
+    }
   }
   
 }
