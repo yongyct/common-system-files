@@ -30,7 +30,7 @@ client = boto3.client(
     aws_secret_access_key='mysecretkey'    # bad practice, use other way e.g. aws configure
 )
 
-cleanup_paths = [{'bucket_name':S3_BUCKET_NAME, 'prefix_name':PREFIX_NAME}]
+cleanup_paths = [(S3_BUCKET_NAME, PREFIX_NAME)]
 
 # Improve this to read actual mtime
 def is_old(date):
