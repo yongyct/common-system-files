@@ -25,5 +25,9 @@
 * This will include symlink in `site-packages` to `/path/to/[local_python_pkg]`, where you can then `import [local_python_pkg]` when running `python` anywhere in the machine
 * When files in `/path/to/[local_python_pkg]` changes, latter will be reflected in `python` programs using it
 
+## Building Cython
+### Using MinGW for compiling Cython extensions
+* See: https://cython.readthedocs.io/en/latest/src/tutorial/appendix.html
+
 ## Structuring projects
 * https://dev.to/codemouse92/dead-simple-python-project-structure-and-imports-38c6
