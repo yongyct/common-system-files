@@ -27,7 +27,7 @@
 
 ## Building Cython
 ### Using MinGW for compiling Cython extensions
-* [Installing & Configure MinGW](https://cython.readthedocs.io/en/latest/src/tutorial/appendix.html)
+* [Installing & configure MinGW as compiler](https://cython.readthedocs.io/en/latest/src/tutorial/appendix.html)
 * [Setting up other dependencies - libpython & m2w64-toolchain](https://python-at-risoe.pages.windenergy.dtu.dk/compiling-on-windows/configuration.html)
 
 ## Structuring projects
