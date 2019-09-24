@@ -7,7 +7,7 @@
 * `redis-server /path/to/redis.conf`
 
 ## Starting redis cluster (after starting individual nodes)
-* `redis-cli --cluser create host1:port1 ... host6:port6 --cluster-replicas 1 -a mypassword`
+* `redis-cli --cluster create host1:port1 ... host6:port6 --cluster-replicas 1 -a mypassword`
 
 ## Some `redis-cli` commands
 * `CLUSTER NODES`
