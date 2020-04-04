@@ -4,7 +4,9 @@
 * `ssh -i /path/to/key.pem -p myport myuser@myhost`
 
 ## SSH Tunneling with Local Port Forwarding
-* `ssh -L [binded local address:]myport:remotehost:remoteport myuser@sshtunnelhost`
+* `ssh -N -L [binded local address:]myport:remotehost:remoteport [-i /path/to/key] myuser@sshtunnelhost`
+* -N to not launch ssh terminal to sshtunnelhost
+* -i to provide private ssh key
 * hitting localaddress:port will be redirected to remotehost:port
 
 ## Passwordless ssh
