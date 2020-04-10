@@ -17,8 +17,8 @@ try:
     tasks = [pool.apply_async(my_func, (my_data, )) for my_data in all_my_data]
     for task in tasks:
         task.get()
-    pool.join()
     pool.close()
+    pool.join()
 except KeyboardInterrupt:
     pool.close()
     pool.terminate()
